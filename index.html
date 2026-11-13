@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Nossa Retrospectiva de Amor</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts: Montserrat, Plus Jakarta Sans & Lora (para a carta romântica) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,400;1,600&family=Montserrat:wght@800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--primary: #FF2E93;
+--secondary: #8338EC;
+--accent: #FFBE0B;
+--bg-dark: #100618;
+}
+
+* {
+box-sizing: border-box;
+-webkit-tap-highlight-color: transparent;
+user-select: none;
+}
+
+input, textarea, select {
+user-select: text;
+}
+
+body {
+font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+background-color: #050507;
+color: #ffffff;
+overflow: hidden;
+margin: 0;
+padding: 0;
+height: 100dvh;
+width: 100vw;
+}
+
+.font-display {
+font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+letter-spacing: -0.03em;
+}
+
+.font-letter {
+font-family: 'Lora', Georgia, serif;
+}
+
+/* Animações das Formas Geométricas Fluidas no Fundo */
+@keyframes floatSlow {
+0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+33% { transform: translate(28px, -36px) rotate(10deg) scale(1.08); }
+66% { transform: translate(-22px, 24px) rotate(-8deg) scale(0.95); }
+}
+
+@keyframes spinSlow {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+0%, 100% { opacity: 0.6; transform: scale(1); }
+50% { opacity: 0.95; transform: scale(1.12); }
+}
+
+@keyframes heartbeat {
+0%, 100% { transform: scale(1); }
+15% { transform: scale(1.18); }
+30% { transform: scale(1); }
+45% { transform: scale(1.12); }
+60% { transform: scale(1); }
+}
+
+@keyframes slideUpFade {
+0% { opacity: 0; transform: translateY(28px) scale(0.96); }
+100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes popIn {
+0% { opacity: 0; transform: scale(0.78) rotate(-2deg); }
+70% { transform: scale(1.03) rotate(1deg); }
+100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes equalizer {
+0%, 100% { height: 22%; }
+50% { height: 100%; }
+}
+
+.animate-float {
+animation: floatSlow 11s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+animation: floatSlow 14s ease-in-out infinite reverse;
+}
+
+.animate-spin-slow {
+animation: spinSlow 26s linear infinite;
+}
+
+.animate-pulse-glow {
+animation: pulseGlow 6s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+animation: heartbeat 2s ease-in-out infinite;
+}
+
+.slide-enter {
+animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slide-enter-delay-1 {
+opacity: 0;
+animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.slide-enter-delay-2 {
+opacity: 0;
+animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.slide-enter-delay-3 {
+opacity: 0;
